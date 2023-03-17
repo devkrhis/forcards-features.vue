@@ -1,11 +1,10 @@
 <template>
     <div class="controlAllItems">
-        <p> Reliable, efficient delivery </p>
-        <p> Powered by technology </p>
-        <p> these cards refer to features for a better presentation of the page </p>
+        <h1> <p class="firstLine"> Reliable, efficient delivery </p> </h1> 
+        <h1> <p> Powered by technology </p> </h1>
+        <h4> <p> these cards refer to features for a better presentation of the page so we can show supervisor, team builder, karma and calculator </p> </h4>
         <div class="alignItems">
-            <SupervisorCard/>
-            <SvgIcon type="mdi" :path="path"></SvgIcon>
+            <SupervisorCard :nome="nome"/>
             <div class="alignItemsColumn"> 
                 <TeamBuilder/>
                 <KarmaCard/>
@@ -20,8 +19,6 @@ import SupervisorCard from './SupervisorCard.vue'
 import TeamBuilder from './TeamBuilder.vue';
 import KarmaCard from './KarmaCard.vue';
 import CalculatorCard from './CalculatorCard.vue';
-import SvgIcon from "@jamescoyle/vue-icon";
-import { mdiWalletOutline } from '@mdil/js';
 
 
 export default {
@@ -30,12 +27,11 @@ export default {
         TeamBuilder,
         KarmaCard,
         CalculatorCard,
-        SvgIcon
 
     },
     data(){
         return {
-            path: mdiWalletOutline,
+            nome: "Krhistopher"
         }
     },
 
@@ -44,11 +40,32 @@ export default {
 </script>
 
 <style scoped>
-
 .controlAllItems p{
     display: flex;
     justify-content: center;
     
+}
+
+.controlAllItems h1{
+    margin-top: 50px
+}
+
+.controlAllItems .firstLine{
+    margin-bottom: -60px;
+    color: rgba(167, 165, 165, 0.884);
+}
+
+.controlAllItems h4{
+    color: rgba(167, 165, 165, 0.884);
+    margin-bottom: 30px;
+}
+
+.controlAllItems .forLine{
+    word-wrap: break-word;
+    width: 650px;
+    display: flex;
+    align-items: center;
+
 }
 
 .alignItems {

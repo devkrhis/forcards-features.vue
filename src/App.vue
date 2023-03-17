@@ -1,9 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar>
       <HomePage/>
-    </v-app-bar>
-
     <v-main>
       <HelloWorld/>
     </v-main>
